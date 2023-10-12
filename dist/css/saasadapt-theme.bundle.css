@@ -1,1 +1,140 @@
+body * {
+  box-sizing: border-box;
+}
 
+.overall-rating {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 100%;
+  color: #333333;
+}
+.overall-rating .title {
+  font-weight: 600;
+  color: black;
+}
+.overall-rating .arrow {
+  line-height: 0;
+  margin: 0 8px;
+}
+.overall-rating .number {
+  font-weight: 700;
+  color: rgb(28, 111, 209);
+  margin-left: 12px;
+}
+.overall-rating .stars svg {
+  width: 20px;
+  height: 20px;
+}
+.overall-rating .stars svg:not(:last-child) {
+  margin-right: 2px;
+}
+.overall-rating .stars svg.half-star {
+  position: relative;
+  z-index: 1;
+  margin-right: -24px;
+}
+
+.sah-product-listing-page {
+  max-width: 1200px !important;
+}
+.sah-product-listing-page__inner {
+  display: flex;
+}
+.sah-product-listing-page__sidebar {
+  width: 300px;
+}
+.sah-product-listing-page__content {
+  width: calc(100% - 300px);
+}
+.sah-product-listing-page__content .sah-product-item {
+  border: 1px solid var(--sat-primary-color);
+  padding: 16px;
+}
+.sah-product-listing-page__content .sah-product-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.sah-product-listing-page__content .sah-product-item__box {
+  display: flex;
+}
+.sah-product-listing-page__content .sah-product-item__description {
+  padding-top: 18px;
+  font-size: 16px;
+  color: #363a41;
+}
+.sah-product-listing-page__content .sah-product-item__description p {
+  margin: 0;
+  display: inline;
+}
+.sah-product-listing-page__content .sah-product-item__description a {
+  color: #1c6fd1;
+  font-weight: 700;
+  text-decoration: none;
+}
+.sah-product-listing-page__content .sah-product-item__description a:hover {
+  text-decoration: underline;
+}
+.sah-product-listing-page__content .sah-product-item__left {
+  display: flex;
+  width: calc(100% - 200px);
+}
+.sah-product-listing-page__content .sah-product-item__right {
+  width: 200px;
+}
+.sah-product-listing-page__content .sah-product-item__right a {
+  background: var(--sat-secondary-color);
+  font-size: 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #FFFFFF;
+}
+.sah-product-listing-page__content .sah-product-item__feaftured-img {
+  width: 100px;
+  height: 100px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 rgba(0, 0, 0, 0), 0 0 rgba(0, 0, 0, 0), 2px 2px 15px 0px rgba(0, 46, 71, 0.1);
+  border-radius: 2px;
+  border: 1px solid var(--sat-primary-color);
+  background: #fff;
+}
+.sah-product-listing-page__content .sah-product-item__feaftured-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.sah-product-listing-page__content .sah-product-item__info {
+  padding-left: 24px;
+}
+.sah-product-listing-page__content .sah-product-item__info a {
+  text-decoration: none;
+}
+.sah-product-listing-page__content .sah-product-item__info h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 125%;
+  font-weight: 700;
+  color: rgb(28, 111, 209);
+}
+.sah-product-listing-page__content .sah-product-item__info h3:hover {
+  text-decoration: underline;
+}
+.sah-product-listing-page__content .sah-product-item__info .company {
+  font-size: 14px;
+  color: #797979;
+  font-weight: 500;
+  margin-top: 8px;
+  line-height: 110%;
+}
+.sah-product-listing-page__content .sah-product-item__info .rating {
+  display: flex;
+  margin-top: 8px;
+}

@@ -1,0 +1,39 @@
+body * {
+    box-sizing: border-box;
+}
+
+.overall-rating {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 100%;
+    color: #333333;
+    .title {
+        font-weight: 600;
+        color: black;
+    }
+    .arrow {
+        line-height: 0;
+        margin: 0 8px;
+    }
+    .number {
+        font-weight: 700;
+        color: rgb(28, 111, 209);
+        margin-left: 12px;
+    }
+    .stars {
+        svg {
+        width: 20px;
+        height: 20px;
+        &:not(:last-child) {
+            margin-right: 2px;
+        }
+        &.half-star {
+            position: relative;
+            z-index: 1;
+            margin-right: -24px;
+        }
+        }
+    }
+}

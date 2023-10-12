@@ -22,13 +22,17 @@ function SAT_css_variables_register() {
   $theme_colors = get_field('theme_color', 'option');
   ob_start();
   ?>
-  :root {
-    --sat-primary-color: <?php echo isset($theme_colors['primary_color']) ? $theme_colors['primary_color'] : '#003049'; ?>;
-    --sat-primary-color-2: <?php echo isset($theme_colors['primary_color_2']) ? $theme_colors['primary_color_2'] : '#D62828'; ?>;
-    --sat-secondary-color: <?php echo isset($theme_colors['secondary_color']) ? $theme_colors['secondary_color'] : '#F77F00'; ?>;
-    --sat-secondary-color-2: <?php echo isset($theme_colors['secondary_color_2']) ? $theme_colors['secondary_color_2'] : '#FCBF49'; ?>;
-    --sat-secondary-color-3: <?php echo isset($theme_colors['secondary_color_3']) ? $theme_colors['secondary_color_3'] : '#EAE287'; ?>;
-  }  
-  <?php
+:root {
+--sat-primary-color: <?php echo isset($theme_colors['primary_color']) ? $theme_colors['primary_color'] : '#003049'; ?>;
+--sat-primary-color-2:
+<?php echo isset($theme_colors['primary_color_2']) ? $theme_colors['primary_color_2'] : '#D62828'; ?>;
+--sat-secondary-color:
+<?php echo isset($theme_colors['secondary_color']) ? $theme_colors['secondary_color'] : '#F77F00'; ?>;
+--sat-secondary-color-2:
+<?php echo isset($theme_colors['secondary_color_2']) ? $theme_colors['secondary_color_2'] : '#FCBF49'; ?>;
+--sat-secondary-color-3:
+<?php echo isset($theme_colors['secondary_color_3']) ? $theme_colors['secondary_color_3'] : '#EAE287'; ?>;
+}
+<?php
   return ob_get_clean();
 }
