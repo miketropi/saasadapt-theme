@@ -12,6 +12,7 @@
   'use strict';
 
   var ready = function ready() {
+    filterProductByKeyword();
     $('#filterProduct').click(function (e) {
       e.preventDefault();
       $('.sah-product-listing-page__sidebar').addClass('active-mb');
@@ -29,6 +30,27 @@
     });
   };
   $(ready);
+  var filterProductByKeyword = function filterProductByKeyword() {
+    // Search Header Ajax
+    $('#searchProductName').keyup(function () {
+      var _this = this;
+      if ($(this).val().length == 0) {
+        return;
+      }
+      setTimeout(function () {
+        $.ajax({
+          url: SAT_PHP_DATA.ajax_url,
+          type: 'post',
+          data: {
+            //   'action': 'load_product_ajax',
+            's': $(_this).val()
+          },
+          beforeSend: function beforeSend() {},
+          success: function success(data) {}
+        });
+      }, 1000);
+    });
+  };
 })(window, jQuery);
 
 /***/ }),
