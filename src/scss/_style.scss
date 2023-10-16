@@ -1,3 +1,16 @@
+body.admin-bar{
+    .sah-product-listing-page .sah-product-listing-page__sidebar{
+        @media (max-width: $screen-tablet-smaller){
+            top: 32px;
+            height: calc(100vh - 32px);
+        }
+        @media (max-width: 782.98px){
+            top: 46px;
+            height: calc(100vh - 46px);
+        }
+        
+    }
+}
 .sah-product-listing-page{
     max-width: 1200px !important;
     &__inner{
@@ -6,9 +19,55 @@
 
     &__sidebar{
         width: 300px;
+        padding-right: 24px;
+        .close-btn{
+            display: none;
+        }
+        .product-options{
+            &:not(:last-child){
+                margin-bottom: 12px;
+                padding-bottom: 12px;
+                border-bottom: 1px solid rgb(163 185 195/1);
+            }
+            h4{
+                margin: 0 0 12px 0;
+                font-size: 20px;
+                line-height: 125%;
+                font-weight: 700;
+                color: #363a41;
+            }
+            .box{
+                cursor: pointer;
+                font-size: 18px;
+                line-height: 125%;
+                color: var(--sat-primary-color);
+                font-weight: 400;
+                margin: 8px 0;
+                input{
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
     }
     &__content{
         width: calc(100% - 300px);
+        .filter-mobile{
+            display: none;
+            background: rgb(28, 111, 209);
+            color: #ffffff;
+            padding: 8px 24px;
+            border-radius: 20px;
+            height: 40px;
+            font-size: 18px;
+            line-height: 125%;
+            font-weight: 700;
+            max-width: 200px;
+            text-align: center;
+            margin: 0 auto 32px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
         .sah-product-item{
             border: 1px solid var(--sat-primary-color);
             padding: 16px;
@@ -53,6 +112,10 @@
                     text-decoration: none;
                     text-align: center;
                     color: #FFFFFF;
+                    transition: .3s ease all;
+                    &:hover{
+                        background: rgb(28, 111, 209);
+                    }
                 }
             }
             &__feaftured-img{
@@ -94,6 +157,99 @@
                 .rating{
                     display: flex;
                     margin-top: 8px;
+                }
+            }
+        }
+        .sah-paginations{
+            margin-top: 32px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            .page-numbers{
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                font-size: 16px;
+                color: var(--sat-primary-color);
+                line-height: 1;
+                transition: .3s ease all;
+                padding: 8px;
+                &.next, &.prev{
+                    width: auto;
+                }
+                &.current, &:hover{
+                    background-color: #c1e8fa;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $screen-tablet-smaller){
+        .sah-product-listing-page{
+            &__sidebar{
+                opacity: 0;
+                visibility: hidden;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 320px;
+                height: 100vh;
+                overflow-y: auto;
+                z-index: 9999;
+                background: #ffffff;
+                padding: 20px;
+                box-shadow: 0 5px 10px -5px rgba(0,0,0,.3), 0 20px 25px -5px rgba(0,0,0,.6);
+                transition: .3s ease all;
+                .close-btn{
+                    width: 30px;
+                    height: 30px;
+                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &.active-mb{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            &__content{
+                width: 100%;
+                .filter-mobile{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $screen-mobile){
+        .sah-product-listing-page{
+            &__content .sah-product-item{
+                &__left{
+                    flex-direction: column;
+                    width: auto;
+                    align-items: center;
+                }
+                &__right{
+                    margin-top: 12px;
+                }
+                &__info{
+                    padding-left: 0;
+                    h3{
+                        margin: 12px 0;
+                    }
+                    .rating{
+                        justify-content: center;
+                    }
+                }
+                &__box{
+                    flex-direction: column;
+                    align-items: center;
                 }
             }
         }
