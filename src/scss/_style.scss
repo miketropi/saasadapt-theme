@@ -99,7 +99,7 @@ body.admin-bar{
     &__content{
         width: calc(100% - 300px);
         .sah-product-item{
-            border: 1px solid var(--sat-primary-color);
+            box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
             padding: 16px;
             &:not(:last-child){
                 margin-bottom: 24px;
@@ -108,7 +108,7 @@ body.admin-bar{
                 display: flex;
             }
             &__description{
-                padding-top: 18px;
+                margin-top: 18px;
                 font-size: 16px;
                 color: #363a41;
                 p{
@@ -182,7 +182,8 @@ body.admin-bar{
                     color: #797979;
                     font-weight: 500;
                     margin-top: 8px;
-                    line-height: 110%;;
+                    line-height: 110%;
+                    display: inline-block;
                 }
                 .rating{
                     display: flex;
