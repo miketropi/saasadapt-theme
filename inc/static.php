@@ -7,15 +7,15 @@
 
 add_action('wp_enqueue_scripts', 'SAT_enqueue_scripts');
 function SAT_enqueue_scripts() {
-  wp_enqueue_style('saasadapt-theme-css', SAT_URI . '/dist/css/saasadapt-theme.bundle.css', [], SAT_VERSION);
-  wp_enqueue_script('saasadapt-theme-js', SAT_URI . '/dist/saasadapt-theme.bundle.js', ['jquery'], SAT_VERSION, true);
+  // wp_enqueue_style('saasadapt-theme-css', SAT_URI . '/dist/css/saasadapt-theme.bundle.css', [], SAT_VERSION);
+  // wp_enqueue_script('saasadapt-theme-js', SAT_URI . '/dist/saasadapt-theme.bundle.js', ['jquery'], SAT_VERSION, true);
 
   wp_localize_script('saasadapt-theme-js', 'SAT_PHP_DATA', [
     'ajax_url' => admin_url('admin-ajax.php'),
     'lang' => []
   ]);
 
-  wp_add_inline_style('saasadapt-theme-css', SAT_css_variables_register());
+  // wp_add_inline_style('saasadapt-theme-css', SAT_css_variables_register());
 }
 
 function SAT_css_variables_register() {
